@@ -1,0 +1,78 @@
+<html>
+    <script> 
+    alert("hola")
+    nombre = prompt("como te llamas")
+    alert("bienvenido a mi programa " + nombre)
+    alert("juega a piedra papel o tijera con un bot")
+    </script>
+<head>
+    <meta charset="utf-8"/>
+    <title> piedra, papel o tijera</title>
+    <script>
+        function aleatorio(min,max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        function eleccion(jugada) {
+            let resultado
+            if(jugada == 1) {
+            resultado = "piedra 🥌"
+        } else if(jugada == 2) {
+            resultado = "papel 📰"
+        } else if(jugada == 3) {
+            resultado = "tijeras ✂"
+        } else {
+            resultado = "TAS BIEN MENS@"
+        }
+        }
+        // 1 es piedra, 2 es papel, 3 es tijera
+        let jugador = 0
+        let min = 1
+        let max = 3
+        let pc = aleatorio(1,3)
+        jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")
+        //alert("elegiste " + jugador)
+        // jugador
+        if(jugador == 1) {
+            alert("Elegiste 🥌")
+        } else if(jugador == 2) {
+            alert("Elegiste 📰")
+        } else if(jugador == 3) {
+            alert("Elegiste ✂")
+        } else {
+            alert("elegiste estar bien mens@")
+        }
+        if(pc == 1) {
+            alert("pc elige 🥌")
+        } else if(pc == 2) {
+            alert("pc elige 📰")
+        } else if(pc == 3) {
+            alert("pc elige ✂")
+        }
+        // COMBATE
+        if(pc == jugador) {
+            alert("EMPATE")
+        } else if(jugador == 1 && pc == 3) {
+            alert("felicidades GANASTE " + nombre)
+        } else if(jugador == 2 && pc == 1) {
+            alert("felicidades GANASTE " + nombre)
+        } else if(jugador == 3 && pc == 2) {
+            alert("felicidades GANASTE " + nombre)
+        }else if(jugador == 1 && pc == 2) {
+            alert("PERDISTE")
+        }else if(jugador == 2 && pc == 3) {
+            alert("PERDISTE")
+        }else if(jugador == 3 && pc == 1) {
+            alert("PERDISTE")
+        }else {
+            alert("TAS BIEN MENS@")
+        } 
+
+
+    </script>
+</head>
+<body>
+    <h1>Piedra, papel o tijera</h1>
+    <p> juegalo para volver a jugar clickea el boton de volver a cargar o presiona ctrl R</p>
+</body>
+</html>
